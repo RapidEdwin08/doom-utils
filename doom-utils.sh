@@ -83,12 +83,12 @@ if [ ! "$pickUTIL" == '' ]; then
 				git clone --depth 1 https://github.com/RapidEdwin08/metapixel-doomed.git
 				cd ~
 			fi
-			dialog --no-collapse --title "   metapixel-doomed [Theme] INSTALLED  " --ok-label Back --msgbox " [/opt/retropie/configs/all/emulationstation/themes]: \n $(ls /opt/retropie/configs/all/emulationstation/themes)"  25 75
+			dialog --no-collapse --title "   metapixel-doomed [Theme] INSTALLED  " --ok-label Back --msgbox " [/opt/retropie/configs/all/emulationstation/themes]:                $(ls /opt/retropie/configs/all/emulationstation/themes)"  25 75
 		fi
 		if [ "$confTHEME" == '2' ]; then
 			cd ~
 			rm /opt/retropie/configs/all/emulationstation/themes/metapixel-doomed -R -f
-			dialog --no-collapse --title "   metapixel-doomed [Theme] REMOVED  " --ok-label Back --msgbox " [/opt/retropie/configs/all/emulationstation/themes]: \n $(ls /opt/retropie/configs/all/emulationstation/themes)"  25 75
+			dialog --no-collapse --title "   metapixel-doomed [Theme] REMOVED  " --ok-label Back --msgbox " [/opt/retropie/configs/all/emulationstation/themes]:                $(ls /opt/retropie/configs/all/emulationstation/themes)"  25 75
 		fi
 		mainMENU
 	fi
