@@ -1,6 +1,11 @@
 #!/bin/bash
 # https://github.com/RapidEdwin08/doom-utils
 
+# Add joy2key for SIJL -> RetroPie Setup
+joy2key=/opt/retropie/admin/joy2key/joy2key
+#$joy2key stop 2>/dev/null
+$joy2key start
+
 doomguyLOGO=$(
 echo '
                                 _###_         
