@@ -32,7 +32,12 @@ pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 # Utilities
 if [ ! "$pickUTIL" == '' ]; then
 	if [ "$pickUTIL" == '1' ]; then
-		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh  | bash
+		# curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh  | bash
+		# 
+		tput reset
+		wget https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh -P /dev/shm/; mv /dev/shm/lzdoom-sijl.sh ~/lzdoom-sijl.sh
+		sudo chmod 755 ~/lzdoom-sijl.sh
+		cd ~; ./lzdoom-sijl.sh
 	fi
 	
 	if [ "$pickUTIL" == '2' ]; then
