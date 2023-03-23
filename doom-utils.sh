@@ -3,7 +3,7 @@
 
 # Add joy2key for SIJL -> RetroPie Setup
 joy2key=/opt/retropie/admin/joy2key/joy2key
-#$joy2key stop 2>/dev/null
+$joy2key stop 2>/dev/null #Stop 1st to avoid Double-Input
 $joy2key start
 
 doomguyLOGO=$(
