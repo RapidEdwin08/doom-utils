@@ -1,6 +1,7 @@
 #!/bin/bash
 # https://github.com/RapidEdwin08/doom-utils
 
+joy2key=/opt/retropie/admin/joy2key/joy2key
 doomguyLOGO=$(
 echo '
                                 _###_         
@@ -33,6 +34,8 @@ pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 if [ ! "$pickUTIL" == '' ]; then
 	if [ "$pickUTIL" == '1' ]; then
 		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh  | bash
+		sudo $joy2key stop 2>/dev/null
+		$joy2key start
 	fi
 	
 	if [ "$pickUTIL" == '2' ]; then
