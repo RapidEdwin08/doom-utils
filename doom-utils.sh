@@ -34,6 +34,7 @@ pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 if [ ! "$pickUTIL" == '' ]; then
 	if [ "$pickUTIL" == '1' ]; then
 		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh  | bash
+		# Exiting RetroPie Setup from SIJL kills joy2key; this will ensure joy2key remains
 		sudo $joy2key stop 2>/dev/null
 		$joy2key start
 	fi
