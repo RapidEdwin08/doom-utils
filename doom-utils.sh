@@ -16,7 +16,6 @@ echo '
             _______             :%%@@#            __(_"; 
            |SHELLS |=|          :%%@@#           /    \  
            |_______|_|           %%@#           {}___)\)_
-
 ')
 
 mainMENU()
@@ -28,7 +27,8 @@ pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 	1 " SIJL [LZDoom + JoyPad Mappings] " \
 	2 " DAZI [D00M M0D Loader Utility] " \
 	3 " IMP [Integrated Music Player] " \
-	4 " metapixel-doomed [ES Theme] " 2>&1>/dev/tty)
+	4 " metapixel-doomed [ES Theme] " \
+	5 " chocolate-doom+ [Additional Emulator Entries] " 2>&1>/dev/tty)
 	
 # Utilities
 if [ ! "$pickUTIL" == '' ]; then
@@ -96,6 +96,14 @@ if [ ! "$pickUTIL" == '' ]; then
 		fi
 		mainMENU
 	fi
+
+	if [ "$pickUTIL" == '5' ]; then
+		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/chocolate-doom-plus/main/chocolate-doom_plus.sh  | bash
+		# Exiting RetroPie Setup from chocolate-doom-plus kills joy2key; this will ensure joy2key remains
+		sudo $joy2key stop 2>/dev/null
+		$joy2key start
+	fi
+	
 	mainMENU
 fi
 
