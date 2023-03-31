@@ -43,9 +43,8 @@ if [ ! "$pickUTIL" == '' ]; then
 		#curl -sSL https://raw.githubusercontent.com/RapidEdwin08/dazi/main/lzdoom-dazi.sh  | bash
 		# DAZI Installer requires the Hard File due to [cp $0] function during INSTALL
 		tput reset
-		wget https://raw.githubusercontent.com/RapidEdwin08/dazi/main/lzdoom-dazi.sh -P /dev/shm/; mv /dev/shm/lzdoom-dazi.sh ~/lzdoom-dazi.sh
-		sudo chmod 755 ~/lzdoom-dazi.sh
-		cd ~; ./lzdoom-dazi.sh
+		#wget https://raw.githubusercontent.com/RapidEdwin08/dazi/main/lzdoom-dazi.sh -P /dev/shm/; mv /dev/shm/lzdoom-dazi.sh ~/lzdoom-dazi.sh; sudo chmod 755 ~/lzdoom-dazi.sh; cd ~; ./lzdoom-dazi.sh
+		wget https://raw.githubusercontent.com/RapidEdwin08/dazi/main/lzdoom-dazi.sh -P /dev/shm/; sudo chmod 755 /dev/shm/lzdoom-dazi.sh; mv /dev/shm/lzdoom-dazi.sh /dev/shm/lzdoom-dazi-tmp.sh; /dev/shm/lzdoom-dazi-tmp.sh
 	fi
 	
 	if [ "$pickUTIL" == '3' ]; then
