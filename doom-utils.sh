@@ -64,7 +64,7 @@ if [ ! "$pickUTIL" == '' ]; then
 			wget https://github.com/RapidEdwin08/imp/releases/download/v2023.11/imp-setup.tar.gz -P ~/
 			tar xvzf imp-setup.tar.gz -C ~/
 			sudo chmod 755 ~/imp/imp_setup.sh
-			cd ~/imp && ./imp_setup.sh
+			cd ~/imp && ./imp_setup.sh && cd ~
 		fi
 		mainMENU
 	fi
