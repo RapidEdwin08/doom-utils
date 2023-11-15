@@ -61,7 +61,7 @@ if [ ! "$pickUTIL" == '' ]; then
 			rm ~/imp-setup.tar.gz
 			rm ~/imp -R -f #ALWAYS PROCEED WITH CAUTION USING rm .. -R -f
 			
-			wget https://github.com/RapidEdwin08/imp/releases/download/v2023.03/imp-setup.tar.gz -P ~/
+			wget https://github.com/RapidEdwin08/imp/releases/download/v2023.11/imp-setup.tar.gz -P ~/
 			tar xvzf imp-setup.tar.gz -C ~/
 			sudo chmod 755 ~/imp/imp_setup.sh
 			cd ~/imp && ./imp_setup.sh
