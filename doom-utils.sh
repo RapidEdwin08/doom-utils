@@ -24,6 +24,7 @@ mainMENU()
 pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 	--ok-label OK --cancel-label EXIT \
 	--menu "                 #  https://github.com/RapidEdwin08  # $doomguyLOGO" 25 75 20 \
+ 	0 " SIJL [GZDoom + JoyPad Mappings] " \
 	1 " SIJL [LZDoom + JoyPad Mappings] " \
 	2 " DAZI [D00M M0D Loader Utility] " \
 	3 " IMP [Integrated Music Player] " \
@@ -32,8 +33,15 @@ pickUTIL=$(dialog --no-collapse --title "  [D00M Utilities]" \
 	
 # Utilities
 if [ ! "$pickUTIL" == '' ]; then
+	if [ "$pickUTIL" == '0' ]; then
+		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/gzdoom-sijl.sh  | bash
+		# Exiting RetroPie Setup from SIJL kills joy2key; this will ensure joy2key remains
+		sudo $joy2key stop 2>/dev/null
+		$joy2key start
+	fi
+ 
 	if [ "$pickUTIL" == '1' ]; then
-		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/main/lzdoom-sijl.sh  | bash
+		curl -sSL https://raw.githubusercontent.com/RapidEdwin08/sijl/3.88b/lzdoom-sijl.sh  | bash
 		# Exiting RetroPie Setup from SIJL kills joy2key; this will ensure joy2key remains
 		sudo $joy2key stop 2>/dev/null
 		$joy2key start
