@@ -72,7 +72,7 @@ if [ ! "$pickUTIL" == '' ]; then
 			wget https://github.com/RapidEdwin08/imp/releases/download/v2025.01/imp-setup.tar.gz -P ~/
 			tar xvzf imp-setup.tar.gz -C ~/
 			chmod 755 ~/imp/imp_setup.sh
-			cd ~/imp && ./imp_setup.sh && cd ~
+			cd ~/imp && ./imp_setup.sh; cd ~
 		fi
 		mainMENU
 	fi
